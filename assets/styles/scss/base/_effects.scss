@@ -1,0 +1,9 @@
+.stm-e-slide-right{
+    @include mui-animation(fade($from: 0, $to: .5), slide($state: in, $direction: right, $amount: 50px ), fade( $to: 1) );
+    animation-duration: 2s;    
+}
+
+.stm-e-slide-up{
+    @include mui-animation(fade($from: 0, $to: .5), slide($state: in, $direction: up, $amount: 30px ), fade( $to: 1) );
+    animation-duration: 2s;    
+}

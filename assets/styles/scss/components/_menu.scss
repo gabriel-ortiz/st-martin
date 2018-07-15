@@ -1,0 +1,76 @@
+/**
+*
+* Styles from nav header
+*
+*/
+
+
+.stm-c-nav{
+    
+    &.sticky{
+        @extend .stm-u-box-shadow-bottom;       
+    }
+
+
+    .menu{
+        align-items: center;
+       
+        
+        li{
+            & > * {
+                @extend .stm-u-weight-bold;
+            }
+            
+            &.active a{
+                    outline: 1px solid get_color(cta);
+                    box-sizing: border-box;
+                    color: get_color(cta) !important;
+                    
+                    &:hover,
+                    &:focus{
+                        background-color: transparent;
+                    }
+                    
+            }
+            
+            a{
+                @extend .stm-u-transition;
+                color: white; 
+                
+                &:hover,
+                &:focus{
+                    background-color: rgba( $light-gray, 0.2 );
+                }
+                
+            }
+        }
+    }
+    
+    .stm-c-nav__cta {
+        @extend .stm-u-weight-bold;
+        @extend .stm-u-transition;
+        display: inline-block;
+        background: get_color(cta);
+        border-radius: 0;
+        border: 1px solid white;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: white;
+        cursor: pointer;
+        line-height: 1;
+        margin-top: 0;
+        padding: $spacer/3 $spacer/2;
+        text-align: center;
+        text-shadow: none;
+        text-transform: uppercase;
+        
+        &:hover,
+        &:focus{
+            background-color: get_color(secondary);
+        }
+        
+    }
+ 
+ 
+    
+}

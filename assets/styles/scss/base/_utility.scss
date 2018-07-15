@@ -1,0 +1,95 @@
+/*
+ * Utility Classes
+ *
+ * These are helpful, single (or limited) purpose, classes 
+ * usually created for the styles you apply the most.
+ * You can include them in your markup or use @extend to 
+ * extend them to various components in your CSS.
+ *
+ * NOTE: Utility classes are always prefixed with `stm-u-`. 
+ */
+
+
+// Spacing
+// --------------------------------------- /
+.stm-u-mt-nudge { margin-top: $spacer/3 !important; }
+.stm-u-mb-nudge { margin-bottom: $spacer/3 !important; }
+.stm-u-ml-nudge { margin-left: $spacer/3 !important; }
+.stm-u-mr-nudge { margin-right: $spacer/3 !important; }
+.stm-u-my-nudge { margin-top: $spacer/3 !important; margin-bottom: $spacer/3 !important; }
+.stm-u-pt-nudge { padding-top: $spacer/3 !important; }
+.stm-u-pb-nudge { padding-bottom: $spacer/3 !important; }
+.stm-u-pr-nudge { padding-right: $spacer/3 !important; }
+.stm-u-pl-nudge { padding-left: $spacer/3 !important; }
+.stm-u-py-nudge { padding-top: $spacer/3 !important; padding-bottom: $spacer/3 !important; }
+@for $i from 0 through 6 {
+    $val: $spacer * $i;
+    .stm-u-ma-#{$i} { margin: $val !important; }
+    .stm-u-mt-#{$i} { margin-top: $val !important; }
+    .stm-u-mr-#{$i} { margin-right: $val !important; }
+    .stm-u-mb-#{$i} { margin-bottom: $val !important; }
+    .stm-u-ml-#{$i} { margin-left: $val !important; }
+    .stm-u-mx-#{$i} { margin-left: $val !important; margin-right: $val !important; }
+    .stm-u-my-#{$i} { margin-top: $val !important; margin-bottom: $val !important; }
+    .stm-u-pa-#{$i} { padding: $val !important; }
+    .stm-u-pt-#{$i} { padding-top: $val !important; }
+    .stm-u-pr-#{$i} { padding-right: $val !important; }
+    .stm-u-pb-#{$i} { padding-bottom: $val !important; }
+    .stm-u-pl-#{$i} { padding-left: $val !important; }
+    .stm-u-px-#{$i} { padding-left: $val !important; padding-right: $val !important; }
+    .stm-u-py-#{$i} { padding-top: $val !important; padding-bottom: $val !important; }
+}
+
+
+// Typography
+// --------------------------------------- /
+.stm-u-weight-light { font-weight: 300 !important; }
+.stm-u-weight-normal { font-weight: 400 !important; }
+.stm-u-weight-medium { font-weight: 500 !important; }
+.stm-u-weight-bold { font-weight: 700 !important; }
+.stm-u-caps { text-transform: uppercase !important; }
+.stm-u-font-size-sm { font-size: 75% !important; }
+.stm-u-font-size-lg { font-size: 125% !important; }
+.stm-u-font-size-xl { font-size: 150% !important; }
+.stm-u-text-left { text-align: left !important; }
+.stm-u-text-center { text-align: center !important; }
+.stm-u-text-right { text-align: right !important; }
+
+
+// Lists
+// ------------------------------------------ /
+.stm-u-clean-list {
+	margin: 0; padding: 0;
+	list-style: none;
+}
+
+
+.stm-u-faded { 
+	opacity: $faded;
+}
+
+
+
+// Display
+// ------------------------------------------ /
+.stm-u-display-block { display: block !important; }
+.stm-u-display-none { display: none !important; }
+.stm-u-display-inline { display: inline !important; }
+.stm-u-display-inline-block { display: inline-block !important; }
+
+// Effects
+// ------------------------------------------ /
+.stm-u-transition {
+	transition: all $duration $easing;
+}
+.stm-u-transition-short {
+	transition: all $duration-short $easing;
+}
+.stm-u-transition-long {
+	transition: all $duration-long $easing;
+}
+
+//box shadow effects
+.stm-u-box-shadow-bottom{
+    box-shadow: $focus-box-shadow-sm;
+}

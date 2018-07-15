@@ -1,0 +1,93 @@
+/**
+
+Stlying for the the theme filtering. 
+
+*/
+
+.stm-c-img{
+    
+    .stm-c-img__control-panel{
+        
+        .jplist-checkbox-dropdown{
+            display:flex;
+            flex-direction: column;
+            position: relative;
+            
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 0;
+                vertical-align: middle;
+                border-top: 5px solid;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                // add event pointer so this the cursor goes through the pseudo eleemnt
+                pointer-events: none;
+            }            
+            
+            .jplist-dd-panel{
+                padding: $spacer/2;
+                @extend .stm-u-weight-bold;
+                @extend .stm-u-transition;
+                @extend .stm-u-caps;
+                color: get_color( secondary );
+                border: 1px solid rgba( $medium-gray, 0.5 );
+                cursor: pointer;
+                
+                &:hover,
+                &:focus{
+                    background: $light-gray;
+                    @extend .stm-u-box-shadow-bottom;
+                }
+                
+            }
+            
+            .stm-c-img__filter-list{
+                @extend .stm-u-clean-list;
+                padding-top: $spacer/2 0;
+                background: white;
+                box-shadow: $box-shadow;
+                position: absolute;
+                z-index: 10;
+                top: 100%;
+                overflow: auto;
+                width: 100%;
+                box-sizing: border-box;
+                
+                @include breakpoint( medium ) {
+                    padding-left: $spacer;
+                    
+                }
+                
+                label{
+                    @extend .stm-u-transition;                    
+                    
+                    &:hover,
+                    &:focus{
+                        color: get_color( secondary );
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    
+    .stm-c-img__grid{
+        margin-top: $spacer;
+        padding-top: $spacer/2;
+        border-top: 1px solid rgba( $medium-gray, 0.5 );        
+        
+        .stm-c-img__block{
+            text-align: center;
+            margin-top: $spacer/2;
+        }
+    }
+    
+    
+}
+

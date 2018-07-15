@@ -1,0 +1,43 @@
+.stm-c-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //padding: 1.5rem 0 2rem;
+    background-color: get_color( secondary );
+    color: white;
+    min-height: $spacer*12;
+    background-position-y: 60%;
+    display: flex;
+    align-items: center;
+    
+    & > .grid-container{
+        flex: 1;
+    }
+    
+    
+    & > * {
+        position: relative;
+    }
+        
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background: linear-gradient( to top, rgba(black, 0.8), rgba(black, 0.3) 35%, rgba(black, 0.1) );
+    }
+
+    
+    .stm-c-hero__title{
+        @extend .stm-u-weight-bold;
+        color: get_color(cta);
+        font-size: 350%;
+        
+    }
+    
+}
