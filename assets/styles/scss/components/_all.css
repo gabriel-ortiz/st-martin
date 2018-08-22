@@ -1,20 +1,20 @@
 /*
-Error: $color: "get_color(primary)" is not a color for `rgba'
-        on line 7 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss
-        from line 2 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_all.scss
+Error: Undefined variable: "$light-gray".
+        on line 7 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_footer.scss
+        from line 1 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_all.scss
 
 2: @import "_front-page.scss";
 3: @import "_hero.scss";
 4: @import "_menu.scss";
 5: @import "_page.scss";
-6: @import "_theme-filters.scss";
+6: @import "_reveal.scss";
+7: @import "_show-more.scss";
+8: @import "_theme-filters.scss";
 
 Backtrace:
-/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss:7
-/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_all.scss:2
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:310:in `reformat_argument_error'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:149:in `rescue in _perform'
-/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:123:in `_perform'
+/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_footer.scss:7
+/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_all.scss:1
+/nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -76,4 +76,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: $color: \"get_color(primary)\" is not a color for `rgba'\A         on line 7 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss\A         from line 2 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_all.scss\A \A 2: @import \"_front-page.scss\";\A 3: @import \"_hero.scss\";\A 4: @import \"_menu.scss\";\A 5: @import \"_page.scss\";\A 6: @import \"_theme-filters.scss\";"; }
+  content: "Error: Undefined variable: \"$light-gray\".\A         on line 7 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_footer.scss\A         from line 1 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_all.scss\A \A 2: @import \"_front-page.scss\";\A 3: @import \"_hero.scss\";\A 4: @import \"_menu.scss\";\A 5: @import \"_page.scss\";\A 6: @import \"_reveal.scss\";\A 7: @import \"_show-more.scss\";\A 8: @import \"_theme-filters.scss\";"; }

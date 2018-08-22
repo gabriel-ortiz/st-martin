@@ -24,7 +24,8 @@ function register_stm_themes() {
 	array(
 			'meta_box'	=> 'simple',
 			'checked_ontop' => true,
-			'allow_hierarchy'	=> true			
+			'allow_hierarchy'	=> true,
+			'public'			=> true
 		),
 	array(
         'singular' => 'Theme',

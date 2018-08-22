@@ -7,3 +7,22 @@
     @include mui-animation(fade($from: 0, $to: .5), slide($state: in, $direction: up, $amount: 30px ), fade( $to: 1) );
     animation-duration: 2s;    
 }
+
+.stm-e-slide-up--short--quick{
+    @include mui-animation(fade($from: 0, $to: .5), slide($state: in, $direction: up, $amount: 15px ), fade( $to: 1) );
+    animation-duration: .5s;    
+}
+
+@keyframes stm-pulse {
+  0% {
+    opacity: 1;
+  }
+  
+  50% {
+      opacity: .4;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}

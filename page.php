@@ -16,15 +16,16 @@ get_header(); ?>
 	<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 	  <!-- Your menu or Off-canvas content goes here -->
 		<div>
-			      	
 			<div>
 				<a href="<?php echo home_url(); ?>"><h3><?php bloginfo('name'); ?></h3></a>
 			</div>      	
 			<div>
 			   <?php joints_off_canvas_nav(); ?>       		
 			</div>
+			<div style="padding: 1rem">
+				<a href="<?php echo esc_url( site_url('/share-your-story/') ); ?>" target="_self" class="stm-c-nav__cta"><span class="fa fa-comments" style="margin-right: 1rem;" aria-hidden="true"></span><?php echo __( 'share your story', 'stm' ); ?></a>
+			</div>			
 		</div>
-
 	</div>
 	<div class="off-canvas-content" data-off-canvas-content>
 		
@@ -33,7 +34,7 @@ get_header(); ?>
 		  
 		<div class="stm-c-hero" style="background-image:url(<?php echo esc_url( $thumb_url ); ?>)" role="banner">
 			
-			<div class="grid-container">
+			<div class="stm-l-container">
 				<div class="grid-x align-middle">
 					<div class="cell medium-6" >
 						<div role="heading" aria-level="1" class="stm-c-hero__title stm-e-slide-up"><?php echo $title; ?></div>
@@ -49,7 +50,7 @@ get_header(); ?>
 
 		</div><!--end of hero container-->		  
 		  
-		<div class="site-content grid-container">
+		<div class="site-content stm-l-container">
 			<div class="inner-content grid-x align-center">
 	
 				<main class="main cell">

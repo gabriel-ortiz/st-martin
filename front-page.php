@@ -10,7 +10,6 @@ get_header('home'); ?>
 			<?php
 			if ( 'page' == get_option( 'show_on_front' ) ) {
 	
-					$thumb_url   	 = get_the_post_thumbnail_url( $post, 'large' );
 					$title       	 = get_the_title();   // Could use 'the_title()' but this allows for override
 					$description 	 = $post->post_excerpt;
 					$content	 	 = get_the_content();
@@ -29,11 +28,23 @@ get_header('home'); ?>
   <div class="off-canvas-wrapper">
     <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
       <!-- Your menu or Off-canvas content goes here -->
+		<div>
+			<div>
+				<a href="<?php echo home_url(); ?>"><h3><?php bloginfo('name'); ?></h3></a>
+			</div>      	
+			<div>
+			   <?php joints_off_canvas_nav(); ?>       		
+			</div>
+			<div style="padding: 1rem">
+				<a href="<?php echo esc_url( site_url('/share-your-story/') ); ?>" target="_self" class="stm-c-nav__cta"><span class="fa fa-comments" style="margin-right: 1rem;" aria-hidden="true"></span><?php echo __( 'share your story', 'stm' ); ?></a>
+			</div>			
+		</div>
+
     </div>
     
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- Your page content lives here -->
-	 	<div class="content stm-c-front-page" data-sticky-container style="background-image:url(<?php echo $thumb_url; ?>)">
+	 	<div class="content" data-sticky-container >
 				
 		 <!-- This navs will be applied to the topbar, above all content 
 			  To see additional nav styles, visit the /parts directory -->
@@ -41,7 +52,7 @@ get_header('home'); ?>
 			
 			<div class="inner-content grid-x">
 				
-			    	<main class="cell small-4 large-offset-1 stm-c-front-page__content stm-e-slide-right ">
+			    	<main class="cell small-10 medium-10 large-4 large-offset-1 stm-c-front-page__content stm-e-slide-right ">
 			    		
 			    		<?php echo $content; ?>
 			    		

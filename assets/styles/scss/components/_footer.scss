@@ -1,0 +1,14 @@
+/**********************
+Footer Styles
+***********************/
+
+
+.footer{
+    background: $light-gray;
+    color: $medium-gray;
+    
+    .home & {
+        display: none;
+    }
+    
+}

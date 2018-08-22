@@ -12,6 +12,7 @@ function setup() {
 	// NOTE: Uncomment to activate shortcode
 	add_shortcode( 'example_shortcode', $n( 'example_shortcode' ) );
 	add_shortcode( 'button', $n( 'button_fn' ) );
+	add_shortcode( 'show_more', $n( 'show_more_fn' ) );	
 }
  /**
   * Create an example shortcode
@@ -56,3 +57,24 @@ function button_fn( $attributes = false, $content = null ) {
 	$html = '<a href="' . esc_url( $data['url'] ) . '" class="ccl-b-btn ' . $classes . '">' . $content . '</a>';
 	return $html;
 }
+
+ function show_more_fn($attributes = false, $content = null ){
+ //extend default attrs with values passed in
+ $data = shortcode_atts( array(
+ 		'only_mobile'	=> null
+	), $attributes );	
+	
+	$classes = 'stm-c-show-hide ' . ( $data['only_mobile'] ? 'stm-c-show-hide--mobile' : '');
+	
+	//output buffering start
+	ob_start();
+	//then HTML goes here
+	?>
+		<a  href="#" class=" <?php echo $classes ?>" title="Continue Reading">Contine Reading</a>
+	<?php
+	
+	$html = ob_get_contents();
+	ob_get_clean();
+	return $html;	
+	
+ }

@@ -1,21 +1,21 @@
 /*
 Error: $color: "get_color(primary)" is not a color for `rgba'
-        on line 7 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss
+        on line 20 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss
 
-2:     height: 100vh;
-3:     width: 100%;
-4:     background-size: cover;
-5:     background-position: center;
-6:     background-repeat: no-repeat;
-7:     background-color: rgba( get_color(primary), 0.5 );
-8:     
-9:     .stm-c-front-page__content{
-10:         background-color: rgba( white, 0.7 );
-11:         padding: $spacer;
-12: 
+15: .stm-c-front-page{
+16:     width: 100%;
+17:     height: 100vh;
+18:     background-size: cover;
+19:     background-repeat: no-repeat;
+20:     background-color: rgba( get_color(primary), 0.5 );
+21:     background-position: center;
+22:     
+23:     .inner-content{
+24: 
+25:         // padding: $spacer;
 
 Backtrace:
-/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss:7
+/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss:20
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:310:in `reformat_argument_error'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:149:in `rescue in _perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:123:in `_perform'
@@ -67,4 +67,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: $color: \"get_color(primary)\" is not a color for `rgba'\A         on line 7 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss\A \A 2:     height: 100vh;\A 3:     width: 100%;\A 4:     background-size: cover;\A 5:     background-position: center;\A 6:     background-repeat: no-repeat;\A 7:     background-color: rgba( get_color(primary), 0.5 );\A 8:     \A 9:     .stm-c-front-page__content{\A 10:         background-color: rgba( white, 0.7 );\A 11:         padding: $spacer;\A 12: "; }
+  content: "Error: $color: \"get_color(primary)\" is not a color for `rgba'\A         on line 20 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_front-page.scss\A \A 15: .stm-c-front-page{\A 16:     width: 100%;\A 17:     height: 100vh;\A 18:     background-size: cover;\A 19:     background-repeat: no-repeat;\A 20:     background-color: rgba( get_color(primary), 0.5 );\A 21:     background-position: center;\A 22:     \A 23:     .inner-content{\A 24: \A 25:         // padding: $spacer;"; }

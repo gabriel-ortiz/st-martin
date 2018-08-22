@@ -73,6 +73,7 @@ require_once STM_INC . 'taxonomies.php';
 
 require_once STM_INC . 'metaboxes.php';
 require_once STM_INC . 'wpuf.php';
+require_once STM_INC . 'translations.php';
 
 
 
@@ -82,6 +83,7 @@ STM_WP\PostTypes\setup();
 STM_WP\Shortcodes\setup();
 STM_WP\Taxonomies\setup();
 STM_WP\WPUF\setup();
+STM_WP\Translations\setup();
 
 
 // Adds site styles to the WordPress editor

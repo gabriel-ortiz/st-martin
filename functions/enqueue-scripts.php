@@ -29,6 +29,14 @@ function site_scripts() {
         filemtime(get_template_directory() . '/assets/scripts/js'), 
         true 
     );
+    
+  //localize some JS Assets
+	wp_localize_script( 'site-js', 'STM', array(
+		'site_url' 	=> site_url('/'),
+		'assets' 	=> STM_ASSETS,
+		'ajax_url' 	=> admin_url( 'admin-ajax.php' ),
+		'nonce'    	=> wp_create_nonce( 'stm_nonce' ),
+	) );  
   
   // Register main stylesheet
   wp_enqueue_style( 
@@ -49,7 +57,7 @@ function site_scripts() {
     );
     
     
-  
+  wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css');   
   
   // Comment reply script for threaded comments
   if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {

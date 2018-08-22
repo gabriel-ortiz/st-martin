@@ -5,7 +5,11 @@
  * This is the template that displays all of the <head> section
  *
  */
+ 
+ $post_id			= get_the_id();
+ $thumb_url   	 = get_the_post_thumbnail_url( $post_id, 'large' );
 ?>
+
 
 <!doctype html>
 
@@ -34,4 +38,4 @@
 
 	</head>
 			
-	<body <?php body_class(); ?>>
+	<body <?php body_class('stm-c-front-page'); ?> style="background-image:url(<?php echo $thumb_url; ?>)">

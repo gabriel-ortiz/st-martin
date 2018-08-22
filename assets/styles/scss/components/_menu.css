@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$light-gray".
-        on line 42 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_menu.scss
+        on line 53 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_menu.scss
 
-37:                 @extend .stm-u-transition;
-38:                 color: white; 
-39:                 
-40:                 &:hover,
-41:                 &:focus{
-42:                     background-color: rgba( $light-gray, 0.2 );
-43:                 }
-44:                 
-45:             }
-46:         }
-47:     }
+48:                 @extend .stm-u-transition;
+49:                 color: white; 
+50:                 
+51:                 &:hover,
+52:                 &:focus{
+53:                     background-color: rgba( $light-gray, 0.2 );
+54:                 }
+55:                 
+56:             }
+57:         }
+58:     }
 
 Backtrace:
-/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_menu.scss:42
+/home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_menu.scss:53
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/funcall.rb:173:in `perform_arg'
@@ -117,4 +117,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$light-gray\".\A         on line 42 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_menu.scss\A \A 37:                 @extend .stm-u-transition;\A 38:                 color: white; \A 39:                 \A 40:                 &:hover,\A 41:                 &:focus{\A 42:                     background-color: rgba( $light-gray, 0.2 );\A 43:                 }\A 44:                 \A 45:             }\A 46:         }\A 47:     }"; }
+  content: "Error: Undefined variable: \"$light-gray\".\A         on line 53 of /home/ubuntu/workspace/wp-content/themes/stm/assets/styles/scss/components/_menu.scss\A \A 48:                 @extend .stm-u-transition;\A 49:                 color: white; \A 50:                 \A 51:                 &:hover,\A 52:                 &:focus{\A 53:                     background-color: rgba( $light-gray, 0.2 );\A 54:                 }\A 55:                 \A 56:             }\A 57:         }\A 58:     }"; }

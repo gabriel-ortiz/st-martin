@@ -1,0 +1,12 @@
+/**
+
+Styles for the show-more UI
+
+*/
+.stm-c-show-hide--hidden {
+  display: none; }
+
+.stm-c-how-hide__toggle {
+  display: none; }
+
+/*# sourceMappingURL=_show-more.css.map */

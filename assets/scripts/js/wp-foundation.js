@@ -6,6 +6,10 @@ and Foundation play nice together.
 
 
 ( function( window, $ ) {
+	
+	var document = this.document;
+
+	
 	$(document).ready(function() {
 		
 	    // Remove empty P tags created by WP inside of Accordion and Orbit

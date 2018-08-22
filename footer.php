@@ -10,7 +10,7 @@
 					
 				<footer class="footer" role="contentinfo">
 					
-					<div class="inner-footer grid-x grid-margin-x grid-padding-x">
+					<div class="inner-footer grid-x grid-margin-x grid-padding-x stm-l-container">
 						
 						<div class="small-12 medium-12 large-12 cell">
 							<nav role="navigation">

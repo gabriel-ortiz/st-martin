@@ -1,0 +1,48 @@
+
+/*************
+Reveal Modal
+**************/
+
+.stm-c-img__slider{
+    width: 90%;
+    margin: 0 auto;
+    
+
+    
+    .stm-c-img__slide-container{
+        margin-top: $spacer;
+        
+        .grid-y {
+            
+            .stm-c-img__img{
+                width: 90%;
+                margin: $spacer auto 0 auto;
+            }
+        
+        }
+            
+        // }
+        
+        // .grid-x{
+  
+        //       .stm-c-img__img{
+        //         height: 85%;
+        //     }          
+            
+        // }
+        
+    }
+    
+    .stm-c-img__name{
+        @extend .stm-u-weight-bold;
+    }
+
+    .stm-c-img__auth-year{
+        font-style: oblique;
+    }
+
+    .stm_c-img__content{
+        margin-top: $spacer;
+    }    
+    
+}

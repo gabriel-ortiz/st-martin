@@ -1,0 +1,14 @@
+/****************
+Layout styles and modifications
+*****************/
+
+
+.stm-l-container{
+    width: 100%;
+    padding: $spacer;
+    
+    @include breakpoint( large ){
+        width: 90%;
+        margin: 0 auto;
+    }
+}

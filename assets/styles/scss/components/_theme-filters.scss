@@ -83,11 +83,64 @@ Stlying for the the theme filtering.
         border-top: 1px solid rgba( $medium-gray, 0.5 );        
         
         .stm-c-img__block{
-            text-align: center;
-            margin-top: $spacer/2;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            background-size: cover;
+            background-position: 50%;
+            transition: all .2s ease;
+            box-sizing: border-box;
+            cursor: pointer;
+            
+            /*********/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+                
+                &:before{
+                    content: "";
+                    display: block;
+                    padding-top: 100%;
+                    float: left;                    
+                }            
+            
+            
+                &:hover,
+                &:focus{
+                    & .stm-c-img__preview-title{
+                        opacity: 1;
+                        
+                        & > * {
+                            @extend .stm-e-slide-up--short--quick;
+                        }
+                    }
+                }
+            
+            .stm-c-img__preview-title{
+                @extend .stm-u-weight-light;
+                @extend .stm-u-transition;
+                opacity: 0;
+                flex-basis: 90%;
+                background-color: rgba( get-color( secondary ), 0.7 ) ;
+                color: white;
+                padding: $spacer;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
         }
     }
     
     
 }
 
+.stm-c-database-filter--on-change{
+    animation: stm-pulse .7s ease 1;
+}
+
+.jplist-hidden{
+    display: none;
+}
