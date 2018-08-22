@@ -184,7 +184,7 @@ get_header(); ?>
 							    
 							    <div id="stm-c-themes__scroll-to-description" class="cell medium-12 large-6 stm-c-themes__description small-order-2 medium-order-2 large-order-1">
 							    	
-							    	<?php if( !empty( the_content() ) ): ?>
+							    	<?php if( $filter_themes || $filter_subjects ): ?>
 								    	<div class="grid-x align-right">
 											<a href="#stm-c-themes__scroll-to-images" data-smooth-scroll class="button small stm-c-themes__scroll hide-for-large flex-child-shrink">Scroll to Images</a>					    		
 								    	</div>
@@ -202,7 +202,7 @@ get_header(); ?>
 									</div>	
 								
 							    	<div class="stm-c-img">
-							    		<?php if( $filter_themes || $filter_subjects ): ?>
+							    		<?php if( $filter_themes || $filter_subjects && $content ): ?>
 							    		<div class="stm-c-img__stat-options grid-x align-justify">
 					                        <div class="stm-u-weight-bold stm-c-database-filter__count flex-child-grow">
 					                            <span class="stm-c-img__remaining"><?php echo $image_count; ?></span> /
