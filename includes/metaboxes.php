@@ -7,9 +7,11 @@
  */
 require_once STM_INC . 'metaboxes/general.php';
 require_once STM_INC . 'metaboxes/page-themes.php';
+require_once STM_INC . 'metaboxes/theme-options.php';
 
 // Add General metabox first, so it always appears at top
 STM_WP\MetaBoxes\General\setup();
 STM_WP\MetaBoxes\PageThemes\setup();
+STM_WP\MetaBoxes\ThemeOptions\setup();
 // Add other metaboxes here
 //require_once STM_INC . 'metaboxes/uploads.php';

@@ -4,7 +4,20 @@
  *
  * For more info: http://jointswp.com/docs/off-canvas-menu/
  */
+
+//get the language CTA
+$lang_cta = '';
+if( class_exists('Polylang') ){
+	if( strpos( pll_current_language(), 'fr' ) !== false ){
+		$lang_cta =  STM_WP\MetaBoxes\ThemeOptions\stm_get_option('stm_fr_menu_cta');
+	}else{
+		$lang_cta =  STM_WP\MetaBoxes\ThemeOptions\stm_get_option('stm_en_menu_cta');		
+	}
+}
+
 ?>
+
+
 <header class="header" role="banner" >
 	<div  class="stm-c-nav sticky" data-sticky data-options="marginTop:0;stickTo:top;" style="width:100%">
 		<div class="top-bar" id="top-bar-menu" >
@@ -16,9 +29,13 @@
 					<div class="stm-c-nav__menu flex-child-grow">
 						<?php joints_top_nav(); ?>	
 					</div>
-				<div class="show-for-large stm-c-nav__cta_container">
-					<a href="<?php echo esc_url( site_url('/share-your-story/') ); ?>" target="_self" class="stm-c-nav__cta"><span class="fa fa-comments" style="margin-right: 1rem;" aria-hidden="true"></span><?php echo __( 'share your story', 'stm' ); ?></a>
-				</div>				
+				<?php if( $lang_cta ): ?>	
+					
+					<div class="show-for-large stm-c-nav__cta_container">
+						<a href="<?php echo esc_url( get_permalink( $lang_cta ) ); ?>" target="_self" class="stm-c-nav__cta"><span class="fa fa-comments" style="margin-right: 1rem;" aria-hidden="true"></span><?php echo get_the_title( $lang_cta ); ?></a>
+					</div>	
+					
+				<?php endif; ?>
 				
 				</div>
 			
