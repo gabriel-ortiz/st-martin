@@ -13,6 +13,7 @@ function setup() {
 	add_shortcode( 'example_shortcode', $n( 'example_shortcode' ) );
 	add_shortcode( 'button', $n( 'button_fn' ) );
 	add_shortcode( 'show_more', $n( 'show_more_fn' ) );	
+	add_shortcode( 'accordion', $n( 'accordion_fn' ) );
 }
  /**
   * Create an example shortcode
@@ -49,12 +50,12 @@ function button_fn( $attributes = false, $content = null ) {
 	$classes = '';
 	// @todo error trapping could be built-in here to check for valid class names
 	if ( array_key_exists( 'size', $data ) && $data['size'] ) {
-		$classes  = 'ccl-is-' . esc_attr( $data['size'] ) . ' ';
+		$classes  = 'stm-is-' . esc_attr( $data['size'] ) . ' ';
 	}
 	if ( array_key_exists( 'style', $data ) && $data['style'] ) {
-		$classes .= 'ccl-is-' . esc_attr( $data['style'] );
+		$classes .= 'stm-is-' . esc_attr( $data['style'] );
 	}
-	$html = '<a href="' . esc_url( $data['url'] ) . '" class="ccl-b-btn ' . $classes . '">' . $content . '</a>';
+	$html = '<a href="' . esc_url( $data['url'] ) . '" class="stm-b-btn ' . $classes . '">' . $content . '</a>';
 	return $html;
 }
 
@@ -78,3 +79,34 @@ function button_fn( $attributes = false, $content = null ) {
 	return $html;	
 	
  }
+ 
+ /**
+* Create an accordion
+*
+* @param $attributes array List of attributes from the given shortcode
+*
+* @return mixed HTML output for the shortcode
+*/
+function accordion_fn( $attributes = false, $content = null ) {
+
+	$data = shortcode_atts( array(
+		'title' => 'Title',
+	), $attributes );
+
+	$content = preg_replace( '#^<\/p>|^<br \/>|<p>$#', '', $content );
+	ob_start();
+	?>
+	<div class="stm-c-accordion">
+		<div class="stm-c-accordion__toggle">
+			<?php echo $data['title']; ?>
+		</div>
+		<div class="stm-c-accordion__content">
+			<?php echo do_shortcode( shortcode_unautop( trim( $content ) ) ); ?>
+		</div>
+	</div>
+	<?php
+	$html = ob_get_contents();
+	ob_get_clean();
+
+	return $html;
+}
